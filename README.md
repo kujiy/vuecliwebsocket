@@ -15,7 +15,7 @@ python3 -m venv env
 source ./env/bin/activate
 ```
 
-## サーバ起動
+## サーバ
 
 ```bash
 git clone https://github.com/dbgso/vuecliwebsocket.git
@@ -26,8 +26,6 @@ python app.py
 ```
 
 ## フロント
-
-# 開発サーバ起動
 
 npmの場合
 
