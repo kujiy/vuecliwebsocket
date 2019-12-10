@@ -1,5 +1,6 @@
 <template>
   <div>
+    dateコマンドの結果をサーバサイドから送っています
     <label for="message">テキスト</label>
     <input type="text" name="message" v-model="message">
     <button @click="send">送信</button>
@@ -21,7 +22,8 @@ export default {
     const ws = (this.ws = new WebSocket(`ws://${location.host}/websocket`));
     ws.onopen = () => {};
     ws.onmessage = message => {
-      this.messages.push(message.data);
+      this.messages = [message.data];
+      // this.messages.push(message.data);
     };
   },
   methods: {

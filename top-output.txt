@@ -1,0 +1,65 @@
+Processes: 442 total, 3 running, 439 sleeping, 2297 threads 
+2019/12/11 00:29:06
+Load Avg: 3.38, 3.75, 4.01 
+CPU usage: 34.73% user, 37.72% sys, 27.54% idle 
+SharedLibs: 142M resident, 30M data, 13M linkedit.
+MemRegions: 115646 total, 2342M resident, 67M private, 758M shared.
+PhysMem: 8129M used (2223M wired), 62M unused.
+VM: 3171G vsize, 1878M framework vsize, 1851316(0) swapins, 2176647(0) swapouts.
+Networks: packets: 2783947/2712M in, 3046411/362M out.
+Disks: 3409624/75G read, 1189774/32G written.
+
+PID    COMMAND         %CPU TIME     #TH #WQ #PORTS MEM   PURG CMPRS PGRP  PPID STATE    BOOSTS %CPU_ME %CPU_OTHRS UID FAULTS COW MSGSENT MSGRECV SYSBSD SYSMACH CSW  PAGEINS IDLEW POWER INSTRS CYCLES USER    #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+96948  mdworker_shared 0.0  00:00.63 4   1   50     7824K 0B   7784K 96948 1    sleeping *0[1]  0.00000 0.00000    502 32074  198 1380    522     4147   3884    2368 1113    5     0.0   0      0      JP23223 N/A    N/A   N/A   N/A   N/A   N/A  
+Processes: 442 total, 3 running, 439 sleeping, 2287 threads 
+2019/12/11 00:29:07
+Load Avg: 3.19, 3.71, 3.99 
+CPU usage: 25.85% user, 21.36% sys, 52.77% idle 
+SharedLibs: 142M resident, 30M data, 13M linkedit.
+MemRegions: 115646 total, 2342M resident, 67M private, 758M shared.
+PhysMem: 8125M used (2437M wired), 65M unused.
+VM: 3171G vsize, 1878M framework vsize, 1851316(0) swapins, 2176647(0) swapouts.
+Networks: packets: 2783957/2712M in, 3046420/362M out.
+Disks: 3409639/75G read, 1189781/32G written.
+
+PID    COMMAND         %CPU TIME     #TH  #WQ #PORTS MEM   PURG CMPRS PGRP  PPID STATE    BOOSTS %CPU_ME %CPU_OTHRS UID FAULTS   COW  MSGSENT MSGRECV  SYSBSD     SYSMACH   CSW       PAGEINS IDLEW   POWER INSTRS     CYCLES     USER    #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+160    SymDaemon       80.1 05:28:10 25/1 9/1 450    388M- 0B   338M+ 160   1    running   0[0]  0.00000 0.00000    0   3823069+ 8355 661437  4920138+ 203863708+ 24832120+ 52909151+ 9996    415006+ 80.3  3160375601 2369049457 root    N/A    N/A   N/A   N/A   N/A   N/A  
+Processes: 442 total, 8 running, 434 sleeping, 2266 threads 
+2019/12/11 00:29:08
+Load Avg: 3.19, 3.71, 3.99 
+CPU usage: 24.13% user, 12.18% sys, 63.67% idle 
+SharedLibs: 142M resident, 30M data, 13M linkedit.
+MemRegions: 115646 total, 2342M resident, 67M private, 758M shared.
+PhysMem: 8167M used (2462M wired), 24M unused.
+VM: 3171G vsize, 1878M framework vsize, 1854620(3304) swapins, 2176647(0) swapouts.
+Networks: packets: 2783973/2712M in, 3046436/362M out.
+Disks: 3409714/75G read, 1189996/32G written.
+
+PID    COMMAND         %CPU TIME     #TH  #WQ #PORTS MEM   PURG CMPRS PGRP  PPID STATE    BOOSTS %CPU_ME %CPU_OTHRS UID FAULTS   COW  MSGSENT MSGRECV  SYSBSD     SYSMACH   CSW       PAGEINS IDLEW   POWER INSTRS     CYCLES     USER    #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+160    SymDaemon       88.7 05:28:11 25/1 9/1 450    388M- 0B   338M- 160   1    running   0[0]  0.00000 0.00000    0   3823071+ 8355 661437  4920171+ 203870173+ 24833316+ 52911376+ 9996    415023+ 89.5  1940031535 1264756074 root    N/A    N/A   N/A   N/A   N/A   N/A  
+Processes: 442 total, 4 running, 438 sleeping, 2236 threads 
+2019/12/11 00:29:09
+Load Avg: 3.19, 3.71, 3.99 
+CPU usage: 40.71% user, 23.9% sys, 36.19% idle 
+SharedLibs: 142M resident, 30M data, 13M linkedit.
+MemRegions: 115646 total, 2342M resident, 67M private, 758M shared.
+PhysMem: 8171M used (2303M wired), 20M unused.
+VM: 3171G vsize, 1878M framework vsize, 1859736(5116) swapins, 2176647(0) swapouts.
+Networks: packets: 2784024/2712M in, 3046534/362M out.
+Disks: 3409805/75G read, 1189996/32G written.
+
+PID    COMMAND         %CPU TIME     #TH  #WQ #PORTS MEM   PURG CMPRS PGRP  PPID STATE    BOOSTS %CPU_ME %CPU_OTHRS UID FAULTS   COW  MSGSENT MSGRECV  SYSBSD     SYSMACH   CSW       PAGEINS IDLEW   POWER INSTRS     CYCLES     USER    #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+160    SymDaemon       60.8 05:28:12 25/2 9/1 450    388M- 0B   339M+ 160   1    running   0[0]  0.00000 0.00000    0   3823079+ 8355 661444+ 4920181+ 203878637+ 24834860+ 52914580+ 9996    415023  60.8  2525271659 1892650891 root    N/A    N/A   N/A   N/A   N/A   N/A  
+Processes: 442 total, 6 running, 436 sleeping, 2208 threads 
+2019/12/11 00:29:10
+Load Avg: 3.19, 3.71, 3.99 
+CPU usage: 54.73% user, 22.27% sys, 22.98% idle 
+SharedLibs: 142M resident, 30M data, 13M linkedit.
+MemRegions: 115646 total, 2342M resident, 67M private, 758M shared.
+PhysMem: 8157M used (2264M wired), 34M unused.
+VM: 3171G vsize, 1878M framework vsize, 1861814(2078) swapins, 2176647(0) swapouts.
+Networks: packets: 2784144/2712M in, 3046753/362M out.
+Disks: 3410085/75G read, 1190299/32G written.
+
+PID    COMMAND         %CPU  TIME     #TH  #WQ #PORTS MEM   PURG CMPRS PGRP  PPID STATE    BOOSTS  %CPU_ME %CPU_OTHRS UID FAULTS   COW   MSGSENT  MSGRECV  SYSBSD     SYSMACH   CSW       PAGEINS IDLEW   POWER INSTRS     CYCLES     USER    #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+3608   Google Chrome   120.0 32:56.00 35/1 2   952-   278M+ 0B   101M- 3608  1    running  *0[577] 0.00000 0.00000    502 7796506+ 34414 9408521+ 6700550+ 15769804+  53541333+ 10603495+ 23676+  201349  120.0 7332172198 3706353962 JP23223 N/A    N/A   N/A   N/A   N/A   N/A  
