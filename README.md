@@ -32,8 +32,7 @@ npmの場合
 ```bash
 cd frontend
 npm install
-npm run start
-
+npm run serve
 ```
 
 ```bash
@@ -42,5 +41,7 @@ yarn
 yarn serve
 ```
 
-* サーバが8080ポートで起動
-* フロントの開発サーバが8081で起動する
+* frontendサーバが8080ポートで起動
+    - http://localhost:8080/
+* backendサーバが8081で起動する
+    - http://localhost:8081/websocket
