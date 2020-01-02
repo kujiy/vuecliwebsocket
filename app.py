@@ -1,15 +1,18 @@
 import tornado.ioloop
 import tornado.web
 import tornado.websocket
- 
+
+import subprocess
+
 cl = {}
  
 class WebSocketHandler(tornado.websocket.WebSocketHandler):
 
-    def initialize(self, key=None):
-        # get query param
-        key = self.get_argument("key", None, True)
+    def get_query_param(self, key):
+        return self.get_argument(key, None, True)
 
+    def initialize(self, key=None):
+        key = self.get_query_param("key")
         if key is None:
             key=99
         self.key=key
@@ -37,12 +40,26 @@ class WebSocketHandler(tornado.websocket.WebSocketHandler):
             cl[self.key].remove(self)
         print(str(cl))
 
+class Cmd(tornado.web.RequestHandler):
+    def get(self):
+        key = self.get_argument("key", None, True)
+        cmd_output = self.execute_command(["date",  '+%Y-%m-%d %H:%M:%S'])
+        self.write("%s %s" % (key, cmd_output))
+
+    def execute_command(self, cmd):
+        # returns output as byte string
+        returned_output = subprocess.check_output(cmd)
+
+        # using decode() function to convert byte string to string
+        return returned_output.decode("utf-8")
+
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
         self.render('index.html')
  
 application = tornado.web.Application([
     (r"/", MainHandler),
+    (r"/websocket/cmd", Cmd),
     (r"/websocket", WebSocketHandler),
 ])
  
