@@ -2,24 +2,38 @@ import tornado.ioloop
 import tornado.web
 import tornado.websocket
  
-cl = []
+cl = {}
  
 class WebSocketHandler(tornado.websocket.WebSocketHandler):
+
+    def initialize(self, key=None):
+        if key is None:
+            key=99
+        self.key=key
+        if self.key not in cl:
+            cl[self.key] = []
+
     def check_origin(self, origin):  
         return True  
 
     def open(self):
-        if self not in cl:
-            cl.append(self)
- 
+        print("open!")
+        if self not in cl[self.key]:
+            cl[self.key].append(self)
+        print(str(cl))
+
     def on_message(self, message):
-        for client in cl:
+        print("on_message!")
+        print(str(cl))
+        for client in cl[self.key]:
             client.write_message(message)
  
     def on_close(self):
-        if self in cl:
-            cl.remove(self)
- 
+        print("disconnected!")
+        if self in cl[self.key]:
+            cl[self.key].remove(self)
+        print(str(cl))
+
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
         self.render('index.html')
@@ -27,6 +41,7 @@ class MainHandler(tornado.web.RequestHandler):
 application = tornado.web.Application([
     (r"/", MainHandler),
     (r"/websocket", WebSocketHandler),
+    (r"/websocket2", WebSocketHandler, dict(key=2))
 ])
  
 if __name__ == "__main__":
