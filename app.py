@@ -7,6 +7,9 @@ cl = {}
 class WebSocketHandler(tornado.websocket.WebSocketHandler):
 
     def initialize(self, key=None):
+        # get query param
+        key = self.get_argument("key", None, True)
+
         if key is None:
             key=99
         self.key=key
@@ -41,7 +44,6 @@ class MainHandler(tornado.web.RequestHandler):
 application = tornado.web.Application([
     (r"/", MainHandler),
     (r"/websocket", WebSocketHandler),
-    (r"/websocket2", WebSocketHandler, dict(key=2))
 ])
  
 if __name__ == "__main__":
