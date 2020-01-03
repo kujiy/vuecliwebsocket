@@ -76,9 +76,8 @@ class WebSocketHandler(tornado.websocket.WebSocketHandler):
         while True:
             output = process.stdout.readline().strip().decode("utf-8") + "\n"
             if re.match("Processes.*", output):
-                self.on_message(self.key)
+                # self.on_message(self.key)
                 self.output = ""
-                time.sleep(10)
             if output == '' and process.poll() is not None:
                 break
             if output:

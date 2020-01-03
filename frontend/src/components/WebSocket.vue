@@ -50,7 +50,6 @@ export default {
         console.log(key);
         this.send();
       }.bind(this), 1000, key);
-      // window.setInterval(() => console.log(key), 1000, key);
     },
     request() {
       axios
