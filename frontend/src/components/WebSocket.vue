@@ -7,10 +7,11 @@
     <button @click="send">送信</button>
     <hr>
     <template>
-      {{ message }}
+      <pre>
+        {{ message }}
+      </pre>
     </template>
     <hr>
-    <div v-for="(message,index) in messages" :key="index" :value="message">{{message}}</div>
   </div>
 </template>
 
@@ -22,7 +23,6 @@ const axios = require('axios');
 export default {
   data() {
     return {
-      messages: [],
       message: "",
       ws: undefined,
       key: ""
@@ -38,7 +38,7 @@ export default {
       const ws = (this.ws = new WebSocket(`ws://${location.host}/websocket?key=${key}`));
       ws.onopen = () => {ws.send(`Hello WebSocket=${key}`)};
       ws.onmessage = message => {
-        this.messages.push(message.data);
+        this.message = message.data;
       };
       this.intervalRequest(key);
     },
@@ -48,8 +48,7 @@ export default {
     intervalRequest(key) {
       setInterval(function() {
         console.log(key);
-        this.request();
-                console.log(this.info);
+        this.send();
       }.bind(this), 1000, key);
       // window.setInterval(() => console.log(key), 1000, key);
     },
